@@ -4,6 +4,8 @@ This is a complete walkthrough for deploying a multi-container architecture feat
 
 This guide includes real-world troubleshooting steps to debug container exit issues (502 Bad Gateway) caused by script restrictions.
 
+### PDF GUIDE: [DEBUG AND DEPLOY OPEN SOURCE DOCKER PROJECT WITH DOCKER COMPOSE.pdf](https://github.com/user-attachments/files/32322045/DEGUB.AND.DEPLOY.OPEN.SOURCE.DOCKER.PROJECT.WITH.DOCKER.COMPOSE.pdf)
+
 ### WATCH VIDEO WALKTHROUGH HERE: https://youtu.be/eQ0LRdsP9x0
 
 
