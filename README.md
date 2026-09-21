@@ -2,7 +2,7 @@
 
 This is a complete walkthrough for deploying a multi-container architecture featuring an NGINX reverse proxy load balancer, two replicated Node.js application instances, and a Redis cache database using Docker Compose. 
 
-The deployment is managed via Docker Compose, a tool that facilitates starting and managing multiple Docker containers together using a single configuration file (compose.yaml). Rather than creating this configuration from scratch, this walkthrough utilizes "Awesome Compose," an official Docker GitHub repository that serves as a "recipe book" containing ready-made Docker Compose examples for various application runtimes and technologies. Specifically, this project involves cloning and deploying the nginx-nodejs-redis repository from Awesome Compose.
+The deployment is managed via Docker Compose, a tool that facilitates starting and managing multiple Docker containers together using a single configuration file (compose.yml). Rather than creating this configuration from scratch, this walkthrough utilizes "Awesome Compose," an official Docker GitHub repository that serves as a "recipe book" containing ready-made Docker Compose examples for various application runtimes and technologies. Specifically, this project involves cloning and deploying the nginx-nodejs-redis repository from Awesome Compose.
 
 This guide includes real-world troubleshooting steps to debug container exit issues (502 Bad Gateway) caused by script restrictions.
 
