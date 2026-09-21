@@ -1,10 +1,14 @@
-# Debugging & Deploying NGINX, Node.js, and Redis with Docker Compose
+# Debug & Deploy a Load-Balanced Web Application with Docker Compose
 
 This is a complete walkthrough for deploying a multi-container architecture featuring an NGINX reverse proxy load balancer, two replicated Node.js application instances, and a Redis cache database using Docker Compose. 
 
 The deployment is managed via Docker Compose, a tool that facilitates starting and managing multiple Docker containers together using a single configuration file (compose.yml). Rather than creating this configuration from scratch, this walkthrough utilizes "Awesome Compose," an official Docker GitHub repository that serves as a "recipe book" containing ready-made Docker Compose examples for various application runtimes and technologies. Specifically, this project involves cloning and deploying the nginx-nodejs-redis repository from Awesome Compose.
 
-This guide includes real-world troubleshooting steps to debug container exit issues (502 Bad Gateway) caused by script restrictions.
+A key aspect of this project from a DevOps perspective is understanding application structure to facilitate containerization, rather than deeply understanding specific code syntax. Furthermore, the walkthrough addresses a real-world scenario by identifying and fixing a specific bug within the cloned open-source repository.
+
+Upon initial deployment (docker compose up), users may encounter a 502 Bad Gateway error because the web servers (web1 and web2) exit immediately after starting. The document identifies the root cause as a recently added security file (.npmrc) that prevents necessary scripts from running. This project includes steps to debug this issue by modifying the web/Dockerfile to start the application using a direct node command rather than an npm script, and subsequently rebuilding the containers without cache.
+
+Final validation involves accessing the application via localhost:80 and refreshing the page to observe NGINX successfully distributing traffic between the two web server containers while Redis serves as the backend database.
 
 ### PDF GUIDE: [DEBUG AND DEPLOY OPEN SOURCE DOCKER PROJECT WITH DOCKER COMPOSE.pdf](https://github.com/user-attachments/files/32322045/DEGUB.AND.DEPLOY.OPEN.SOURCE.DOCKER.PROJECT.WITH.DOCKER.COMPOSE.pdf)
 
